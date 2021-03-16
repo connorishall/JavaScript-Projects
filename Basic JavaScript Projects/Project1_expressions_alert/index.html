@@ -6,6 +6,14 @@
     <script src="./JS/main.js"></script>
 </head>
 <body>
-
+    <button onmouseover="displayDate()">The time is?</button>
+    
+    <script>
+    function displayDate() {
+      document.getElementById("demo").innerHTML = Date();
+    }
+    </script>
+    
+    <p id="demo"></p>
 </body>
 </html>
