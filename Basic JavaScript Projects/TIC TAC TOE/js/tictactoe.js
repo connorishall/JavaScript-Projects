@@ -56,13 +56,18 @@ function placeXOrO(squareNumber) {
         let success = false;
         //this variable stores a random number 0-8
         let pickASquare;
+        //This condition allows our while loopif a square is selected already
+        while(!success) {
+            //A random number between 0 and 8 is selected 
+            pickASquare = String(Math.floor(Math.random() * 9));
         //this condition allows our while loop to keep trying if a square is selected yet 
         if (placeXOrO(pickASquare)) {
             //this line calls the function
             placeXOrO(pickASquare);
             //this changes our boolean and ends thwe loop.
             success = true;
-        };
+            };
+        }
     }
 }
 
@@ -171,7 +176,7 @@ function animateLineDrawing() {
         //This condition cancels our animation loop
         if (x >= x2 && y >= y2) { cancelAnimationFrame(animationLoop); }
     }
-    if (x1 <= x2 && y >= y2) { cancelAnimationFrame(animationLoop); }
+
 
 //6,4,2 win condition
 if (x1 <= x2 && y1 >= y2) {
