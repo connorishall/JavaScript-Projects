@@ -21,6 +21,7 @@ function for_Loop() {
 
 //ARRAYS AND OBJECTS  
 function cat_pics() {
+    var Cat_Picture;
     Cat_Picture[0] = "sleeping" ;
     Cat_Picture[1] = "playing" ;
     Cat_Picture[2] = "eating" ;
@@ -72,3 +73,12 @@ for (i = 0; i < 10; i++) {
   text += "The number is " + i + "<br>";
 }
 document.getElementById("break").innerHTML = text;
+
+//CONTINUE STATEMENT
+var text = "";
+var i;
+for (i = 0; i < 10; i++) {
+  if (i === 3) { continue; }
+  text += "The number is " + i + "<br>";
+}
+document.getElementById("continue").innerHTML = text;
