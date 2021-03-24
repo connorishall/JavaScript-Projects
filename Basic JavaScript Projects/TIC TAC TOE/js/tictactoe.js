@@ -38,7 +38,7 @@ function placeXOrO(squareNumber) {
 
 
         //This function plays placement sound
-        Audio('./media/place.mp3');
+        audio('./media/place.mp3');
         //this condition checks to see if it is computers turn
         if(activePlayer === 'O') {
             //this function disables clicking for computer choice 
@@ -105,7 +105,7 @@ function checkWinConditions() {
     //squares are selected the code executes
     else if (selectedSquares.length >= 9) {
         //This function plays the time game sound
-        Audio('./media/tie.mp3');
+        audio('./media/tie.mp3');
         //This function sets a .3 second timer before the resetGame is called
         setTimeout(function () {resetGame(); }, 1000);
     }
