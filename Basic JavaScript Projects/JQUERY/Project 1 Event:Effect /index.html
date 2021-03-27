@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<script>
+//A function to execute when the DOM is fully loaded.
+    $(document).ready(function(){
+//Inserts content at the end of selected elements
+        $("html").append(
+            "<body>\
+            <div id='container'>\
+                <div id='inner'>\
+                    <h1>Basic jQuery</h1>\
+                    <p id='1'>Paragraph 1</p>\
+                    <p id='2'>Paragraph 2</p>\
+                    <p id='3'>Paragraph 3</p>\
+                </div>\
+            </div>\
+        </body>"
+        );
+//Making paragraph 2 red
+        $("#2").css({"color":"red"});
+        $("#3").click(function() {
+//Tagging the h1 element to hide using the .hide effect
+            $('h1').hide();
+        });
+    });
+</script>
+</html>
